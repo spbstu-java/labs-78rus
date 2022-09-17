@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-
         System.out.println("Press the number 1,2 or 3 to choose the mode of movement and 4 for exit : ");
         Hero hero = new MoveClasses.HeroOnFoot();
         Hero hero1 = new MoveClasses.HeroOnHorse();
