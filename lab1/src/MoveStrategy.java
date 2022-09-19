@@ -1,4 +1,3 @@
 public interface MoveStrategy {
-    default void move() {
-    }
+   String move();
 }

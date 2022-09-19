@@ -1,11 +1,17 @@
 import java.util.Scanner;
 
 public class Main {
+
+    public static class Hero {
+        public void moveing(MoveStrategy move ){
+            System.out.println(move.move());
+        }
+    }
+
     public static void main(String[] args) {
         System.out.println("Press the number 1,2 or 3 to choose the mode of movement and 4 for exit : ");
-        Hero hero = new MoveClasses.HeroOnFoot();
-        Hero hero1 = new MoveClasses.HeroOnHorse();
-        Hero hero2 = new MoveClasses.HeroOnWings();
+        Hero hero = new Hero();
+
 
         Scanner sc = new Scanner (System.in);
 
@@ -14,15 +20,15 @@ public class Main {
             int i = sc.nextInt();
             switch (i) {
                 case 1 -> {
-                    hero.move();
+                    hero.moveing(new MoveOnHorseStrategy());
 
                 }
                 case 2 -> {
-                    hero1.move();
+                    hero.moveing(new FlyingStrategy());
 
                 }
                 case 3 -> {
-                    hero2.move();
+                    hero.moveing(new FootStrategy());
 
                 }
                 case 4 -> {
@@ -37,13 +43,5 @@ public class Main {
         }
     }
 
-    public static class Hero {
-        MoveStrategy moveStrategy;
 
-        public  void move(){
-
-            moveStrategy.move();
-        }
-
-    }
 }
