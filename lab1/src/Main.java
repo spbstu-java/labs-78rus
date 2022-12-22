@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 public class Main {
-
     public static class Hero {
         public void moveing(MoveStrategy move ){
             System.out.println(move.move());
@@ -11,7 +10,6 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Press the number 1,2 or 3 to choose the mode of movement and 4 for exit : ");
         Hero hero = new Hero();
-
 
         Scanner sc = new Scanner (System.in);
 
